@@ -1,0 +1,211 @@
+.flex{display: flex; justify-content: space-between;}  /*aligne les cards (et boutons) de gauche à droite et centre  */
+
+.flex_center{display: flex; justify-content: center;
+flex-wrap: wrap}
+
+.taille_img {object-fit:cover;
+width:90%}
+
+.bloc_espace{ display:flex;
+justify-content: space-between; flex-wrap:wrap;} 
+
+
+  /*
+.container{width: 80%;
+max-witdh:1000 px;
+  flex-wrap:wrap;}   */  
+
+
+
+
+/* image sans survol de la souris*/
+.image {
+  filter: brightness(20%);
+  opacity:1;}
+
+.image_dead {
+  filter: brightness(20%);
+   opacity:1;}
+
+
+.texte_reward { 
+  position: absolute;
+  z-index: 3;/* .texte sera au-dessus de image */
+  background: white;
+  border:1px solid #000;
+  border-radius:10px;
+  left:20%;
+  top:5%;
+
+  opacity: 0.8;
+  text-align: center;
+  width: 70%;
+  height: 20%;
+  font-size:30px;
+}
+
+/* hauteur de l'image égale pour chaque cards de fellows*/
+.obj{
+  object-fit:cover;
+  height: 350px;
+  width:100%;
+
+}
+
+.height_carousel{
+    object-fit:cover;
+  height: 450px;
+}
+
+.dead{
+  position: absolute;
+  top: 10%;
+  left:40%;
+  opacity: 0.6;
+  text-align: center;
+  font-size:50px;
+  color: orange;
+}
+
+
+/* couleur du 1000 */
+.color{
+  color:orange;}
+
+
+/* texte gandalf */
+.nom_gandalf{color:white;
+  font-size:60px;
+   position:absolute;
+  z-index: 3; /* .texte sera au-dessus de image */
+
+  left:30%;
+  top: 30%;
+}
+
+/* au passage de la souris l'image n'est pas transparante */
+.bloc_cache:hover img{
+  filter: brightness(80%);
+  }
+
+/* cache le texte reward au passage de la souris */
+.bloc_cache:hover .texte_reward {
+    opacity:0;}
+
+.image_dead:hover{
+   filter: brightness(80%)
+    }
+
+/*animation du nom: gandalf => changement de position et de taille */
+.bloc_cache:hover .nom_gandalf{    
+    opacity: 1;
+    animation: animation 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation{
+  from{
+    top: 30%;
+    left: 30%;
+  }
+  to{
+    top: 50% ;
+    left: 35%;
+    font-size: 40px;
+  }
+}
+
+/* background color orange navbar*/
+.bg-style{
+  background-color:#FF4500;
+}
+
+
+@font-face{
+  font-family: "Party";
+  src: url("Police/partybusiness.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+nav, h6, h5, h4, h3, h2, h1, p, footer, strong, span {
+  font-family: "Party";
+  font-weight: normal;
+  font-size: normal;
+}
+
+@font-face{
+  font-family: "Aniron";
+  src: url("Police/tnganb.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font_title{
+  font-family: "Aniron";
+  font-weight: normal;
+  font-size: normal;
+}
+
+
+section{
+  border: solid;
+  padding: 3%;
+}
+
+/*couleur de la card en noir*/
+.card_black {
+  background-color: black;
+}
+
+/* texte card, nav-bar etc en blanc*/
+.text_carte, .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .nav-link{
+  color: white;
+}
+
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+
+}
+
+.taille_font{
+  font-size: 60%;
+}
+
+@font-face{
+  font-family: "Aniron rm";
+  src: url("Police/anirm___.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rm {
+  font-family: "Aniron rm";
+}
+
+.underline:hover {
+  text-decoration: underline;
+  color: orange;
+
+}
+
+.barre_orange {
+  text-decoration: line-through orange;
+}
+
+
+
+/* @include media-breakpoint-down(xs) { 
+.custom_class{
+  display: flex;
+  flex-wrap:wrap;
+    }
+}*/
+
+@media (max-width: 575.98px) { 
+  .custom_class{
+  display: flex;
+  flex-wrap:wrap;
+    } }
