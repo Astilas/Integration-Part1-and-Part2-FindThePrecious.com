@@ -1,0 +1,105 @@
+.flex{display: flex; justify-content: space-between;}  /*aligne les cards (et boutons) de gauche à droite et centre  */
+
+.flex_center{display: flex; justify-content: center;}
+
+.taille_img {object-fit:cover;
+width:90%}
+
+.bloc_espace{ display:flex;
+justify-content: space-between; flex-wrap:wrap;} 
+
+
+  /*
+.container{width: 80%;
+max-witdh:1000 px;
+  flex-wrap:wrap;}   */  
+
+
+
+
+/* image sans survol de la souris*/
+.image {
+  filter: brightness(80%);
+  opacity:0.5;}
+
+.texte_reward { 
+  position: absolute;
+  z-index: 3;/* .texte sera au-dessus de image */
+  background: white;
+  border:1px solid #000;
+  border-radius:10px;
+  left:20%;
+  top:5%;
+
+  opacity: 0.8;
+  text-align: center;
+  width: 60%;
+  font-size:16px;
+}
+
+/* hauteur de l'image égale pour chaque cards de fellows*/
+.obj{
+  object-fit:cover;
+  height: 250px;
+
+}
+
+.height_carousel{
+    object-fit:cover;
+  height: 350px;
+}
+
+.dead{
+  position: absolute;
+  top: 10%;
+  left:25%;
+  opacity: 0.8;
+  text-align: center;
+  font-size:35px;
+}
+
+
+/* couleur du 1000 */
+.color{
+  color:orange;}
+
+
+/* texte gandalf */
+.nom_gandalf{color:white;
+  font-size:20px;
+   position:absolute;
+  z-index: 3; /* .texte sera au-dessus de image */
+
+  left:28%;
+  top: 30%;
+}
+
+/* au passage de la souris l'image n'est pas transparante */
+.bloc_cache:hover img{
+    opacity:100;
+  }
+
+/* cache le texte reward au passage de la souris */
+.bloc_cache:hover .texte_reward{
+    opacity:0;}
+
+
+/*animation du nom: gandalf => changement de position et de taille */
+.bloc_cache:hover .nom_gandalf{    
+    opacity: 1;
+    animation: animation 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation{
+  from{
+    top: 30%;
+    left: 28%;
+  }
+  to{
+    top: 50% ;
+    left: 30%;
+    font-size: 15px;
+  }
+}
+
